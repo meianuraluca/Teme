@@ -1,0 +1,111 @@
+.first-container{
+    margin-left: 18%;
+    margin-right: 18%;
+
+}
+
+.subject{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4%;
+    margin-left: 8%;
+}
+
+.detailSubject{
+    width:34%;
+    margin-right: 5%;
+}
+.containerIcon{
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    background-color: #404041;
+    margin-left: 29%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.subjectIcon{
+    color: white;
+    width: 55%;
+    height: 55%;
+    margin-top: 22%;
+}
+
+.titleSubject{
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 20px;
+    color: #25bfec;
+    font-weight: 700;
+    font-family: "Maven Pro";
+    text-align: center;
+}
+.titleSubjectFirst{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    letter-spacing: -1px;
+    line-height: 20px;
+    color: #25bfec;
+    font-weight: 700;
+    font-family: "Maven Pro";
+    text-align: center;
+}
+.infoSubject{
+    font-size: 16px;
+    color: #848484;
+    font-weight: 500;
+    font-family: "Maven Pro";
+    text-align: center;
+}
+.btnSubject{
+    width: 54%;
+    height: 30px;
+    color:#7c7c7c;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border: 2px solid #7c7c7c;
+    text-align: center;
+    margin-left: 20%;
+    margin-top:10.3%;
+    display: flex;
+    flex-direction: row;
+}
+
+.btnSubject > div{
+    margin-left: 14%;
+    margin-top: 5%;
+}
+
+
+.btnIcon{
+    margin-top: 6%;
+}
+
+.about > h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid  #7c7c7c; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    font-size: 23px;
+    color: #7c7c7c;
+    font-weight: 400;
+    font-family: "Maven Pro";
+    text-align: center;
+ } 
+
+ 
+.about > h2 > span { 
+     background:#fff; 
+     padding:0 10px; 
+ }
+
+.about > p{
+    font-size: 16px;
+    color: #848484;
+    font-weight: 500;
+    font-family: "Maven Pro";
+    text-align: center;
+}

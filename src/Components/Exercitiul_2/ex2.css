@@ -1,0 +1,24 @@
+.options{
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    border: 1px solid black;
+    margin: 10px;
+    padding:10px;
+    width: 8%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+  }
+  
+  .container{
+    margin-left: 8%;
+  }
+  
+  .celula{
+    border: 1px solid black;
+    padding: 10px;
+  }
+  
