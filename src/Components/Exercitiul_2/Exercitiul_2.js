@@ -9,7 +9,8 @@ class Exercitiul_2 extends Component{
         {data:['Toate'], id:'select0',selectedIndex:0, selectedOption:'Toate'},
         {data:['Toate'], id:'select1',selectedIndex:0, selectedOption:'Toate'},
         {data:['Toate'], id:'select2',selectedIndex:0, selectedOption:'Toate'}
-      ]
+      ],
+      lastOption:[false, false, false]
     };
   }
   componentDidMount(){
@@ -36,6 +37,7 @@ class Exercitiul_2 extends Component{
     })
   }
   changeOption=(event)=>{
+    console.log(event.target.value)
     let index = event.target.id[event.target.id.length-1];
     this.setState(prevState => {
       let options =  prevState.options;
@@ -75,14 +77,41 @@ class Exercitiul_2 extends Component{
     return this.filterData(val,index);
   }
 
+  filterOptionsSelect=(val, index)=>{
+    if(val ===  'Toate')
+      return true;
+    return this.filterData(val,index)
+  }
+
+  auxFunction=(val, index)=>{
+    let op;
+    let ok = true;
+    for(let i=0; i < 3; i++){
+      op = this.state.options[i].data.filter(this.filterOptionsSelect);
+      op  = op.filter((v,i)=>op.indexOf(v)===i)
+      if(op.length > 2)
+        ok = false;
+    }
+    if(ok === true){
+      if( index === 0)
+        return false;
+      else
+        return true;
+    }
+
+    return true;
+
+  }
+
 
   render(){
     let op =this.state.options
     return(<div>
       {this.state.options.map((option,index)=>{
-        return <select className='options' defaultValue={option.selectedOption} key={index} id={option.id} onChange={this.changeOption}>
-          {option.data.filter(this.filterData)
-                      .filter((v,i)=>op[index].data.filter(this.filterData).indexOf(v)===i)
+        return <select className='options' value={option.selectedOption} key={index} id={option.id} onChange={this.changeOption}>
+          {option.data.filter(this.filterOptionsSelect)
+                      .filter((v,i)=>op[index].data.filter(this.filterOptionsSelect).indexOf(v)===i)
+                      .filter(this.auxFunction)
                       .map((val, ind)=>{ return <option value={val} key={ind}>{val}</option>
         })}
         </select>
